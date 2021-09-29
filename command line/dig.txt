@@ -1,0 +1,22 @@
+#Step1 find domain FQDN
+#Reverse DNS - resolver.domain should be the DNS server to query
+dig @resolver.domain -x {IP_Address} +short
+
+#Step2 get the SOA Records
+#Query for SOA Records - local.domain should be the domain name found from reverse lookup
+dig @resolver.domain local.domain SOA
+
+#Query ALL DNS Records - resolver.domain should be the DNS server to query
+dig @resolver.domain ANY +noall +answer
+
+#Query TTL Records
+dig @resolver.domain local.domain TTL
+
+#Query MX Records
+dig @resolver.domain local.domain MX
+
+#Query Domain "A" Records with +short
+dig @resolver.domain local.domain +short
+
+#Test zone transfer
+dig @resolver.domain AXFR zonetransfer.domain
