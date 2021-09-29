@@ -1,0 +1,3 @@
+# commands to mount raw disk images
+kpartx -a -v ./ image.raw
+mount -o ro,noload /loop /mnt/point

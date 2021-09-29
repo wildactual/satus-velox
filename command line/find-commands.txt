@@ -1,0 +1,5 @@
+# text within file name
+find ./ -iname "*text*"
+
+# find file modified between dates provide
+find  . -type f -newermt "2020-01-01" \! -newermt "2020-01-01" | xargs stat
