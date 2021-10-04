@@ -13,3 +13,11 @@
 **docker copy in/out of container**
 `docker cp [options] [source] [destination]`
 
+**remove all containers running or not**
+`docker rm -f $(docker ps -aq)`
+ 
+**remove dangling objects**
+`docker system prune`
+  
+**purge images not in use in containers**
+`docker image prune -a`
