@@ -1,4 +1,4 @@
-# Configs--Commands--Notes
+# Satus Velox: Quick Start
  **Collection of frequently used configs, commands, and misc notes**
 
  1. Common configuration examples with comments and explainations
