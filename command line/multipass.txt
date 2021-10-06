@@ -1,5 +1,0 @@
-multipass launch hirsute --name server1
-multipass shell server1
-multipass stop server1
-multipass delete server1
-multipass purge

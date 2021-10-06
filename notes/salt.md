@@ -1,8 +1,8 @@
-**run highstate -- update all salt members**
+**run highstate -- update all salt members**</br>
 `salt \* state.highstate`
 
-**run highstate for minions named \*sensor\***
+**run highstate for minions named \*sensor\***</br>
 `salt \*sensor\* state.highstate`
 
-**remove minion from salt grid**
+**remove minion from salt grid**</br>
 `salt-key -d \*sensor\*`
