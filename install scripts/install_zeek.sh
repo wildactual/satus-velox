@@ -1,4 +1,5 @@
 #! /bin/bash
+# from: https://docs.zeek.org/en/master/install.html
 sudo apt update
 sudo apt-get install cmake make gcc g++ flex bison libpcap-dev libssl-dev python3 python3-dev swig zlib1g-dev
 git clone --recursive https://github.com/zeek/zeek
