@@ -6,9 +6,9 @@
 
 ---
 
-## **Collection of frequently used configs, commands, and misc notes**
+## **Collection of installation scripts, configurations examples, command examples, and misc notes**
 
-Synopisis.
+**Synopisis.**
  1. Quick start bash scripts.
  1. Small collection of notes.
  1. Common configuration examples with comments and explainations
@@ -21,6 +21,7 @@ Synopisis.
 - These commands are not exhaustive - but frequently used and tested
 - Install scripts are intended to minimize searching the internet for common tasks that are repeated.
 
+---
 
 **Start**: Clone this repository to search locally for topics of interest.
 
