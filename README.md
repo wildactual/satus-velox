@@ -8,7 +8,7 @@
 
 ## **Collection of installation scripts, configurations examples, command examples, and misc notes**
 
-**Synopisis.**
+### Synopisis.
  1. Quick start bash scripts.
  1. Small collection of notes.
  1. Common configuration examples with comments and explainations
