@@ -23,4 +23,4 @@ sudo sh -c 'echo "deb [arch=amd64,arm64,armhf signed-by=/etc/apt/trusted.gpg.d/p
 rm -f packages.microsoft.gpg
 sudo apt update 
 sudo apt install code -yqq
-sudo apt install nmap mmv -yqq
+sudo apt install nmap mmv keepass2 -yqq
