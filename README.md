@@ -6,11 +6,21 @@
 
 ---
 
- **Collection of frequently used configs, commands, and misc notes**
+## **Collection of frequently used configs, commands, and misc notes**
 
+Synopisis.
+ 1. Quick start bash scripts.
+ 1. Small collection of notes.
  1. Common configuration examples with comments and explainations
  1. Frequently used commands with comments
- 1. Other misc notes
 
- Clone this repository to quickly gather these frequently used items
+
+### Conventions
+---
+- Most of the information contained in this repository is meant for use with an Ubuntu based system.
+- These commands are not exhaustive - but frequently used and tested
+- Install scripts are intended to minimize searching the internet for common tasks that are repeated.
+
+
+**Start**: Clone this repository to search locally for topics of interest.
 
