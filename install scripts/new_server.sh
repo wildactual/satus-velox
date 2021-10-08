@@ -10,17 +10,4 @@ sudo apt-get install docker-ce docker-ce-cli containerd.io -yqq
 sudo usermod -aG docker $USER
 sudo curl -L "https://github.com/docker/compose/releases/download/1.29.2/docker-compose-$(uname -s)-$(uname -m)" -o /usr/local/bin/docker-compose
 sudo chmod +x /usr/local/bin/docker-compose
-
-# from: https://help.vivaldi.com/desktop/install-update/manual-setup-vivaldi-linux-repositories/
-wget -qO- https://repo.vivaldi.com/archive/linux_signing_key.pub | sudo apt-key add -
-sudo add-apt-repository 'deb https://repo.vivaldi.com/archive/deb/ stable main'
-sudo apt update && sudo apt install vivaldi-stable -yqq
-
-# from: https://code.visualstudio.com/docs/setup/linux
-wget -qO- https://packages.microsoft.com/keys/microsoft.asc | gpg --dearmor > packages.microsoft.gpg 
-sudo install -o root -g root -m 644 packages.microsoft.gpg /etc/apt/trusted.gpg.d
-sudo sh -c 'echo "deb [arch=amd64,arm64,armhf signed-by=/etc/apt/trusted.gpg.d/packages.microsoft.gpg] https://packages.microsoft.com/repos/code stable main" > /etc/apt/sources.list.d/vscode.list' 
-rm -f packages.microsoft.gpg
-sudo apt update 
-sudo apt install code -yqq
-sudo apt install nmap mmv keepass2 -yqq
+sudo apt install nmap mmv -yqq
