@@ -1,0 +1,1 @@
+**command usage example:** `docker-compose -f gostatic_compose.yml up -d`
