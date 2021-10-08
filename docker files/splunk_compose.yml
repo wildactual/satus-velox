@@ -1,0 +1,25 @@
+# source https://hub.docker.com/r/splunk/splunk/
+version: "3"
+
+services:
+  splunk:
+    container_name: splunk
+    image: splunk/splunk:latest
+    ports:
+      # these should be changed to match configured settings within Splunk server
+      - "8000:8000/tcp" # web default
+      - "8089:8089/tcp" # management port deault
+      - "8191:8191/tcp" # KV store default
+      - "8443:8443/tcp" # alternate SSL port
+      - "9997:9997/tcp" # server data port default
+    environment:
+      # change timezone!!
+      SPLUNK_START_ARGS: '--accept-license'
+      # change password!!
+      SPLUNK_PASSWORD: 'changeme'
+    # Volumes store your data between container upgrades
+    # this will keep applications and indices default locations outside of Splunk
+    volumes:
+      - '/opt/splunk/etc/apps/:/opt/splunk/etc/apps/'
+      - '/opt/splunk/var/lib/splunk/:/opt/splunk/var/lib/splunk/'
+    restart: unless-stopped
