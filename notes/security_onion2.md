@@ -120,3 +120,14 @@
 
 **Reset User Passwords:** `sudo so-user update user@fqdn`
 
+**Set disk retension policy per sensor**
+- cp `/opt/so/saltstack/default/pillar/minions/{sensor_name}.sls` to the local path `../../../local/pillar/minions`
+- edit `/opt/so/saltstack/local/pillar/minions/{sensor_name}.sls`
+
+```
+  steno:
+    enabled: True
+    diskfreepercentage: 60
+
+```
+
