@@ -59,3 +59,8 @@
 - SED - substitution
   - `sed -i 's/term1/term2/g' file.txt` - globally replaced term1 with term2 in file.txt
   - `sed -i 's/term1/term2' file.txt` - will only change first instance - not globally
+
+- Journalctl
+  - `journalctl --file=./system.journal` - reads in the provided journalctl files
+  - `journalctl -k` or `journalctl --dmesg` - show kernal messages for current boot
+  - `journalctl -u systemd-resolved.service` - return log information about provided service name
