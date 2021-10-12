@@ -22,4 +22,5 @@ services:
     volumes:
       - '/opt/splunk/etc/apps/:/opt/splunk/etc/apps/'
       - '/opt/splunk/var/lib/splunk/:/opt/splunk/var/lib/splunk/'
+      - '/opt/loader/:/opt/loader/'
     restart: unless-stopped
