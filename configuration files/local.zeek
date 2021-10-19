@@ -6,6 +6,9 @@
 # the creation of file IDs. Please change this to a hard to guess value.
 redef digest_salt = "Please change this value.";
 
+# when reading a pcap file this provides the correct local network variables
+redef Site::local_nets = { 10.0.0.0/8, 172.16.0.0/12, 192.168.0.0/16 };
+
 # This script logs which scripts were loaded during each run.
 @load misc/loaded-scripts
 
@@ -107,3 +110,6 @@ redef digest_salt = "Please change this value.";
 
 # need for JSON logging
 @load policy/tuning/json-logs.zeek
+
+# loads packages from zkg
+@load packages
