@@ -1,0 +1,12 @@
+# More info at https://hub.docker.com/r/rmountjoy/dashmachine
+services:
+  dashmachine:
+    container_name: dashmachine
+    image: rmountjoy/dashmachine:latest
+    # edit ports to not conflict with other ports
+    ports:
+      - "5000:5000"
+    # Volumes store your data between container upgrades
+    volumes:
+      - './dashmachine/:/dashmachine/dashmachine/user_data/'
+    restart: unless-stopped
