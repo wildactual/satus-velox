@@ -38,7 +38,7 @@
 
 - Symbolic links
   - create a sybolic link - source to destination - destination is created by command
-  - `ln -s /mnt/d/ ./local_d  
+  - `ln -s /mnt/d/ ./local_d`
   
 - LS Command
   - `ls -lat` - sort by modification time
@@ -59,8 +59,21 @@
 - SED - substitution
   - `sed -i 's/term1/term2/g' file.txt` - globally replaced term1 with term2 in file.txt
   - `sed -i 's/term1/term2' file.txt` - will only change first instance - not globally
+  - `sed 's/../&:/g'` - add a colon between every 2 characters
 
 - Journalctl
   - `journalctl --file=./system.journal` - reads in the provided journalctl files
   - `journalctl -k` or `journalctl --dmesg` - show kernal messages for current boot
   - `journalctl -u systemd-resolved.service` - return log information about provided service name
+
+- Users and groups
+  - `cut -d: -f1 /etc/passwd` - list all users
+  - `adduser john` - add user
+  - `usermod -aG sudo john` - add user to Group with append
+  - `sudo groupadd new_group` - add a group
+  - `sudo usermod -g wheel john` - change primary group
+
+- Misc
+  - `tail -n +2 $file >> headerless.txt` - remove first line from file using tail
+  - `sudo cp /etc/netplan/00-installer-config.yaml{,.backup}` - Create a back file in one command line.
+  - `ls /var/log/auth.log | less !$` - use the previous argument for next command -- !$
