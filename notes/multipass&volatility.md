@@ -48,3 +48,10 @@ git clone https://github.com/volatilityfoundation/volatility.git
     - `module.dwarf` and the `System.map-5.11.0-34-generic` is needed for the Volatility profile
     - the profile must be zipped into one file with the `module.dwarf` in the root and `System.map-5.11.0-27-generic` in a `/boot` directory in the zip
 17. Volatility linux profiles go in `/usr/local/lib/python2.7/dist-packages/volatility/plugins/overlays/linux/`
+
+```bash
+git clone https://github.com/volatilityfoundation/volatility.git
+cd volatility/tools/linux/
+sudo apt install make binutils -y
+sudo apt install dwarfdump build-essential linux-headers-generic libdwarf-dev -y
+```
