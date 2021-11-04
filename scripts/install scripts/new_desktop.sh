@@ -39,4 +39,4 @@ sudo apt autoremove -yqq && sudo apt autoclean -yqq
 # added python-pip packages
 pip install stormssh
 # install vscode extensions
-for extensions in hookyqr.beautify wheredoesyourmindgo.gruvbox-concoctis shd101wyy.markdown-preview-enhanced davidanson.vscode-markdownlint robertrossmann.remedy ms-vscode-remote.remote-ssh ms-vscode-remote.remote-ssh-edit ms-vscode-remote.remote-wsl ms-python.vscode-pylance ms-python.python github.vscode-pull-request-github eamodio.gitlens phplasma.csv-to-table; do code --install-extension $extensions; done;
+for extensions in hookyqr.beautify streetsidesoftware.code-spell-checker wheredoesyourmindgo.gruvbox-concoctis davidanson.vscode-markdownlint robertrossmann.remedy ms-vscode-remote.remote-ssh ms-vscode-remote.remote-ssh-edit ms-vscode-remote.remote-wsl ms-python.vscode-pylance ms-python.python github.vscode-pull-request-github eamodio.gitlens phplasma.csv-to-table yzhang.markdown-all-in-one mechatroner.rainbow-csv splunk.splunk visualstudioexptteam..vscodeintellicode redhat.vscode-yaml; do code --install-extension $extensions; done;
