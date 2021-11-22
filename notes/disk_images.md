@@ -1,5 +1,5 @@
 **commands to mount raw disk images - -r option is readonly -- maps to /dev/mapper**</br>
-`kpartx -a -v -r ./ image.raw`
+`kpartx -a -v -r ./image.raw`
 
 **noload required with Read-Only**</br>
 `mount -o ro,noload /dev/mapper/loop /mnt/point`  
