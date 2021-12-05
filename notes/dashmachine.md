@@ -10,7 +10,7 @@ background = random
 roles = admin,user,public_user
 home_access_groups = all
 settings_access_groups = admin_only
-custom_app_title = Long Dong Links
+custom_app_title = Dashmachine
 sidebar_default = no_sidebar
 tags_expanded = True
 
