@@ -15,9 +15,12 @@
 
 **remove all containers running or not**</br>
 `docker rm -f $(docker ps -aq)`
- 
+
 **remove dangling objects**</br>
 `docker system prune`
   
 **purge images not in use in containers**</br>
 `docker image prune -a`
+
+**update a docker container restart policy**
+`docker update --restart unless-stopped container1`
