@@ -11,5 +11,5 @@
 **Enable HTTPS with custom certificates (must be PEM format)**  
 `sudo nextcloud.enable-https custom fqdn.pem fqdn.key.pem ca.pem`
 
-**Changed default files to empty directory**
+**Changed default files to empty directory**  
 `sudo nextcloud.occ config:system:set skeletondirectory -value=""`
