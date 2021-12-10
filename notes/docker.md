@@ -24,3 +24,6 @@
 
 **update a docker container restart policy**
 `docker update --restart unless-stopped container1`
+
+**docker-compose fore recreate containers**  
+`docker-compose up -d --force-recreate`
