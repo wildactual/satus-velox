@@ -1,4 +1,6 @@
 # More info at https://hub.docker.com/r/pierrezemb/gostatic
+version: "3.8"
+
 services:
   gostatic:
     container_name: gostatic

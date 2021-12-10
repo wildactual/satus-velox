@@ -1,0 +1,19 @@
+# Admin page accessible on port 9443
+version: "3.8"
+
+services:  
+  portainer:
+    image: 'portainer/portainer-ce'
+    container_name: portainer
+    restart: unless-stopped
+    expose:
+      - '8000'
+      - '9443'
+    # Expose ports without publishing them to the host machine - they’ll only be accessible to linked services. Only the internal port can be specified.
+    # uncomment the ports section to allow portainer to be accessible on the host machine 
+    # ports:
+    #   - "8000:8000"
+    #   - "9443:9443"
+    volumes:
+      - /var/run/docker.sock:/var/run/docker.sock
+      - ./portainer:/data

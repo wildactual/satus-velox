@@ -1,0 +1,18 @@
+version: "3.8"
+
+services:  
+  uptime-kuma:
+    image: 'louislam/uptime-kuma:1'
+    container_name: uptime-kuma
+    restart: unless-stopped
+    environment:
+      - NODE_EXTRA_CA_CERTS=/certs/fullchain.crt
+    volumes:
+      - ./uptime-kuma:/app/data
+      - ./uptime-kuma/certs:/certs:ro
+    expose:
+      - '3001'
+    # Expose ports without publishing them to the host machine - they’ll only be accessible to linked services. Only the internal port can be specified.
+    # uncomment the ports section to allow uptime-kuma to be accessible on the host machine 
+    # ports:
+    #   - "3001:3001"

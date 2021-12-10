@@ -1,0 +1,38 @@
+version: "3.8"
+
+services:
+  nginx-proxy-manager:
+    image: 'jc21/nginx-proxy-manager:latest'
+    container_name: nginxproxymanager
+    restart: unless-stopped
+    ports:
+      - '80:80'
+      - '81:81'
+      - '443:443'
+    environment:
+      DB_MYSQL_HOST: "nginx-proxy-manager_db"
+      DB_MYSQL_PORT: '3306'
+      DB_MYSQL_USER: "npm"
+      # set a better password
+      DB_MYSQL_PASSWORD: "password"
+      DB_MYSQL_NAME: "npm"
+    volumes:
+      - ./nginx-proxy-manager/data:/data
+      - ./nginx-proxy-manager/letsencrypt:/etc/letsencrypt
+
+
+  nginx-proxy-manager_db:
+    image: 'jc21/mariadb-aria:latest'
+    container_name: nginx-proxy-manager_db
+    restart: unless-stopped
+    expose:
+      - '3306'
+    environment:
+      # set a better password
+      MYSQL_ROOT_PASSWORD: 'password'
+      MYSQL_DATABASE: 'npm'
+      MYSQL_USER: 'npm'
+      # set a better password
+      MYSQL_PASSWORD: 'password'
+    volumes:
+      - ./nginx-proxy-manager_db/data/mysql:/var/lib/mysql

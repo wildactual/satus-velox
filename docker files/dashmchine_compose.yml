@@ -1,4 +1,6 @@
 # More info at https://hub.docker.com/r/rmountjoy/dashmachine
+version: "3.8"
+
 services:
   dashmachine:
     container_name: dashmachine
