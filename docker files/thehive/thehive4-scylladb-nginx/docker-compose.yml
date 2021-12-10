@@ -1,0 +1,46 @@
+version: "3.8"
+services:
+  scylladb:
+    image: scylladb/scylla
+    container_name: scylladb
+    restart: unless-stopped
+    volumes:
+      - "./vol/scylla/data:/var/lib/scylla"
+    command: --smp 1 --memory 4G
+    networks:
+      backend:
+
+  thehive:
+    image: "thehiveproject/thehive4:latest"
+    user: "root"
+    container_name: thehive
+    restart: unless-stopped
+    depends_on:
+      - scylladb
+    volumes:
+      - ./vol/thehive/application.conf:/etc/thehive/application.conf
+      - ./vol/thehive/data:/opt/thp/thehive/data
+      - ./vol/thehive/index:/opt/thp/thehive/index
+    command: "--no-config --no-config-secret"
+    links:
+      - scylladb
+    networks:
+      backend:
+
+  nginx:
+    image: nginx:1.19.5
+    container_name: nginx
+    restart: unless-stopped
+    ports:
+      - 443:443
+    volumes:
+      - ./vol/nginx:/etc/nginx/conf.d
+      - ./vol/ssl:/etc/ssl
+    links:
+      - thehive
+    networks:
+      backend:
+
+networks:
+  backend:
+    driver: bridge
