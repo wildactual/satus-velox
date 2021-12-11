@@ -7,8 +7,9 @@
   </p>
 </div>
 
-## Repository of docker-compose files needed to build TheHive with Scylladb.
-- The inital account is `admin`/`secret` -- change first thing
+## Repository of docker-compose files needed to build TheHive with Scylladb
+
+- The initial account is `admin`/`secret` -- change first thing
 - Starting with TheHive4 user logins are by email/fqdn, ie `user1@local.net`
 
 ## Permissions
@@ -16,9 +17,11 @@
 This `docker-compose` will start TheHive4 w/ Scylladb and Nginx as the proxy.  The docker compose stanza `user: "root"` sets the permissions to the directories for TheHive to start.
 
 If there is a permission error, most likely evidenced in the logs by ...
+
 ```log
 "The application secret has not been set, and we are in prod mode. Your application is not secure." errors but i see the command: "--no-config --no-config-secret"
 ```
+
 Manually change the permission to the required directories of `./vol/thehive/data` and `./vol/thehive/index` by stopping the container after first run and then change the permissions.
 
 ```bash
