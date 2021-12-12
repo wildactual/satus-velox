@@ -30,7 +30,7 @@ rm -f packages.microsoft.gpg
 #
 sudo apt-get update 
 # main install line for all the things
-sudo apt install vivaldi-stable code nmap mmv keepass2 docker-ce docker-ce-cli containerd.io python3-pip gimp kpartx jq -yqq
+sudo apt install openssh-server vivaldi-stable code nmap mmv keepass2 docker-ce docker-ce-cli containerd.io python3-pip gimp kpartx jq -yqq
 sudo usermod -aG docker $USER
 sudo curl -L "https://github.com/docker/compose/releases/download/1.29.2/docker-compose-$(uname -s)-$(uname -m)" -o /usr/local/bin/docker-compose
 sudo chmod +x /usr/local/bin/docker-compose
@@ -40,3 +40,5 @@ sudo apt autoremove -yqq && sudo apt autoclean -yqq
 pip install stormssh
 # install vscode extensions
 for extensions in hookyqr.beautify streetsidesoftware.code-spell-checker wheredoesyourmindgo.gruvbox-concoctis davidanson.vscode-markdownlint robertrossmann.remedy ms-vscode-remote.remote-ssh ms-vscode-remote.remote-ssh-edit ms-vscode-remote.remote-wsl ms-python.vscode-pylance ms-python.python github.vscode-pull-request-github eamodio.gitlens phplasma.csv-to-table yzhang.markdown-all-in-one mechatroner.rainbow-csv splunk.splunk visualstudioexptteam..vscodeintellicode redhat.vscode-yaml; do code --install-extension $extensions; done;
+sudo systemctl start ssh
+sudo systemctl enable ssh
