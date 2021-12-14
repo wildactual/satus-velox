@@ -15,3 +15,15 @@ network:
         addresses: [ 9.9.9.9,8.8.8.8 ]
   version: 2
 ```
+
+## Configure an interface up but without an IP address ##
+```yml
+# An empty stanza will create an interface up with an address
+network:
+  version: 2
+  renderer: networkd
+  ethernets:
+    enp10s0f0:
+      dhcp4: yes
+    enp10s0f1: {}
+```
