@@ -18,7 +18,7 @@ network:
 
 ## Configure an interface up but without an IP address ##
 ```yml
-# An empty stanza will create an interface up with an address
+# An empty stanza will create an interface up without an address
 network:
   version: 2
   renderer: networkd
