@@ -18,4 +18,4 @@
 `sudo nextcloud.occ ldap:delete-config s01`
 
 **Get LDAP Configuration**  
-`sudo nextcloud.occ ldap:show-config'
+`sudo nextcloud.occ ldap:show-config`
