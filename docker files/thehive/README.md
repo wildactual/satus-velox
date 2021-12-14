@@ -22,7 +22,7 @@ If there is a permission error, most likely evidenced in the logs by ...
 "The application secret has not been set, and we are in prod mode. Your application is not secure." errors but i see the command: "--no-config --no-config-secret"
 ```
 
-Manually change the permission to the required directories of `./vol/thehive/data` and `./vol/thehive/index` by stopping the container after first run and then change the permissions.
+Manually change the permission to the required directories of `./vol/thehive/data` and `./vol/thehive/index` by stopping the container after first run and then change the permissions.  The `application.conf` must be present this will also create the error above.
 
 ```bash
 sudo chown -R 1000:1000 ./vol/thehive/data
