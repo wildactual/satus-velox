@@ -13,3 +13,9 @@
 
 **Changed default files to empty directory**  
 `sudo nextcloud.occ config:system:set skeletondirectory -value=""`
+
+**Clear LDAP configuration**  
+`sudo nextcloud.occ ldap:delete-config s01`
+
+**Get LDAP Configuration**  
+`sudo nextcloud.occ ldap:show-config'
